@@ -1,0 +1,46 @@
+<p>ng-for works!</p>
+
+<div class="row">
+    <div class="col-2">
+        <ul>
+            <li *ngFor="let city of cityList">{{city}}</li>
+        </ul>
+    </div>
+    <div class="col-7">
+        <button *ngFor="let cityName of cityList" class="btn btn-success mx-1">{{cityName}}</button>
+    </div>
+    <div class="col-3">
+        <div *ngFor="let city  of cityList">
+            <span>{{city}}</span>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-3">
+        <select>
+            <option *ngFor="let emp of employeeArray" [value]="emp.emId">
+                {{emp.name}}-{{emp.city}}
+            </option>
+        </select>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Emp Id</th>
+                    <th>Name</th>
+                    <th>City</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let emp of employeeArray">
+                    <td>{{emp.emId}}</td>
+                    <td>{{emp.name}}</td>
+                    <td>{{emp.city}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
